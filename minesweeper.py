@@ -34,6 +34,7 @@ class MineSweeper(object):
     num_uncovered = 0
     gameEnd = False
 
+    #score variable keeps track of score running score during the game
     score = 0
     gameWon = False
 
@@ -53,6 +54,7 @@ class MineSweeper(object):
             for col in range(column):
                 self.board[row].append(Square((row, col)))         
     
+        # difficulty denotes how hard the game is
         if difficulty == 1:
             if row * column < 10:
                 self.bomb_number = 2
@@ -87,6 +89,7 @@ class MineSweeper(object):
             print "Playing on %d x %d board with difficulty %d" % \
                 (row, column, difficulty)
 
+    # this function returns the state of the current game 
     def get_state(self):
         state = []
         for row in range(self.row_size):
@@ -169,10 +172,10 @@ class MineSweeper(object):
 
     def get_next_state(self, square):
         if not square.isUncovered:
-            if square.value == self.bomb_value:
+            if(square.value == self.bomb_value):
                 self.gameEnd = True
             else:
-                self.score += 5
+                self.score = self.score + 5
                 self.update_board(square)
 
         # if all non-bomb squares have been uncovered, game is won
