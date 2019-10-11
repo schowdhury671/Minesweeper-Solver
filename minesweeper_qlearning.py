@@ -29,9 +29,14 @@ def main(args):
 			for action in otherMap[state]:
 				pair = (state, action)
 				print "        ", action, ": ", str(qMap[pair])
+				
+		for non_state in map_duplicate:
+			print("debug 1")
+			for state in map_duplicate:
+				print("coming to this condition")
 
-	numLearningIterations = 10
-	numPlayingIterations = 100
+	numLearningIterations = 15
+	numPlayingIterations = 198
 	numRows = 4
 	numCols = 4
 	difficulty = 1
@@ -216,7 +221,7 @@ def main(args):
 	print "Percentage of games won: ", successRate
 	print "Cleared an average of %f%% of the board." % (avgPercentTilesCleared)
 
-	# This prints out the qMap in a more readable manner
+	
 
 
 
