@@ -35,12 +35,12 @@ def main(args):
 			for state in map_duplicate:
 				print("coming to this condition")
 
-	numLearningIterations = 15
-	numPlayingIterations = 198
+	numLearningIterations = 20
+	numPlayingIterations = 178
 	numRows = 4
 	numCols = 4
 	difficulty = 1
-	shouldPrintMap = False
+	shouldPrintMap = True
 	display_game=True
 
 	cont = False
