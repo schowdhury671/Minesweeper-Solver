@@ -3,7 +3,6 @@
 from random import randint
 import random
 import numpy as np
-import pandas as pd
 import collections
 import time
 import os
